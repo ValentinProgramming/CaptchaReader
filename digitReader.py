@@ -24,6 +24,7 @@ targets = targets [:10000]
 
 # flatten
 images = images.reshape(-1, 784)
+print(len(images))
 images = images.astype(float)
 
 scaler = StandardScaler()
