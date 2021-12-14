@@ -122,19 +122,19 @@ history = model.fit(char_train, output_train,
 loss_curve = history.history["loss"]
 acc_curve = history.history["accuracy"]
 
-loss_val_curve = history.history["val_loss"]
-acc_val_curve = history.history["val_accuracy"]
+loss_validation_curve = history.history["val_loss"]
+acc_validation_curve = history.history["val_accuracy"]
 
 fig = plt.figure()
 loss=fig.add_subplot(121)
 loss.set_title("Loss")
 plt.plot(loss_curve, label="Train")
-plt.plot(loss_val_curve, label="Val")
+plt.plot(loss_validation_curve, label="Validation")
 plt.legend(loc='upper left')
 accuracy=fig.add_subplot(122)
 accuracy.set_title("Accuracy")
 plt.plot(acc_curve, label="Train")
-plt.plot(acc_val_curve, label="Val")
+plt.plot(acc_validation_curve, label="Validation")
 plt.legend(loc='upper left')
 plt.title("Accuracy")
 plt.show()
